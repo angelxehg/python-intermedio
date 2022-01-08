@@ -2,10 +2,9 @@
 
 def palindrome(string):
     try:
-        if len(string) == 0:
-            raise ValueError("No se puede ingresar una cadena vacia")
+        assert len(string) > 0, "No se puede ingresar una cadena vacia"
         return string == string[::-1]
-    except ValueError as e:
+    except AssertionError as e:
         print(e)
         return False
 
